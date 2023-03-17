@@ -1,0 +1,106 @@
+* {
+  margin : 0;
+  padding : 0;
+  font-family: 'Satoshi', sans-serif;
+  color: white;
+}
+
+body {
+  background: linear-gradient(180deg, #02020A 25.93%, #010010 100%);
+}
+
+a {
+  text-decoration: none;
+}
+
+// Page home
+.video {
+  width: 100vw;
+}
+
+.accueil {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+}
+
+.ga {
+  background: linear-gradient(to left, #AD00FF, #FFB800, #FFB800);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.free {
+  color: #01FFA4;
+}
+
+.btn-banniere {
+  padding: 7px;
+  border-image: linear-gradient(to right, #AD00FF, #FFB800, #FFB800) 1;
+  background: transparent;
+}
+
+.h2 {
+  background: linear-gradient(to right, #00FFFF, #AD00FF);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title1 {
+  position: absolute;
+  left: 33%;
+  top: 185%;
+  background: transparent;
+}
+
+.title2 {
+  position: absolute;
+  right: 32%;
+  top: 185%;
+  background: transparent;
+}
+
+h3 {
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.pos {
+  position: absolute;
+  top: 280%;
+  right: 5%;
+}
+
+.img {
+  width: 339px;
+  height: 309px;
+}
+
+// Page des articles
+
+.img {
+  height: 285px;
+  width: 414px;
+}
+
+.card {
+  background-color: #090F44;
+}
+
+.bibi {
+  background: linear-gradient(to right, #00FFFF, #AD00FF);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.badge {
+  border: solid white;
+  border-radius: 25px;
+}
+
+.register {
+  height: 100vh;
+  background: linear-gradient(to right, #00FFFF, #AD00FF);
+}

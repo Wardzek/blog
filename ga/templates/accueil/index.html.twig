@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block main %}
+            <div>
+                <video autoplay loop muted playsinline class="video">
+                    <source src="{{ asset('build/images/Séquence 05.2970613a.mp4') }}">
+                </video>
+                <div class="accueil">
+                    <h1>Découvrez l’univers Web3 <br> grâce à <span class="ga">Grind Academy</span></h1>
+                    <button class="btn-banniere">Démarrer ici <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                        </svg></button>
+                </div>
+            </div>
+
+        <div>
+            <div class="row align-items-center justify-content-center">
+                <h2 class="text-center mt-3">Ils sont passés par là</h2>
+                <img class="col-md-2" src="{{ asset('build/images/starknet.1d16f757.png') }}" alt="logo-starknet">
+                <img class="col-md-2" src="{{ asset('build/images/PenguinFinance.9efdd954.png') }}" alt="logo-penguinFinance">
+                <img class="col-md-2" src="{{ asset('build/images/landx.537db584.png') }}" alt="logo-landX">
+                <img class="col-md-2" src="{{ asset('build/images/traderjoe.e471f110.png') }}" alt="logo-traderJoe">
+                <img class="col-md-2" src="{{ asset('build/images/nftperp.72e6e2ab.png') }}" alt="logo-nftPerp">
+            </div>
+        </div>
+
+        <div>
+            <h2 class="h2 text-center">Approfondissez vos compétences</h2>
+        </div>
+
+        <div>
+            <a class="title1" href="{{ path('app_post') }}">
+                <h3>Articles</h3>
+            </a>
+            <a class="title2" href="{{ path('app_formation') }}">
+                <h3>Formations</h3>
+            </a>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center m-5">
+                <img class="col-4" src="{{ asset('build/images/Image Card Articles.3996dd2c.svg') }}" alt="image-article">
+                <img class="col-4" src="{{ asset('build/images/Image Card Formations.f48bc054.svg') }}" alt="image-formation">
+            </div>
+        </div>
+
+        <div>
+            <h4 class="text-center">Farming, Dex, Liquidity Pool, DAO, Lending,  NFTs, Play2Earn, Borrowing, Risk2Earn, Proof of Work, Blockchains, Staking </h4>
+        </div>
+                <h2 class="h2 text-center m-5">Notre histoire</h2>
+                <p class="text-justify m-5">La Grind Academy a une vocation purement pédagogique et éducative.<br>
+                    Majoritairement centré sur la DeFi et l’écosystème crypto, vous y trouverez un large panel de ressources partagées et/ou <br> rédigées par la communauté appuyant l’aspect participatif.<br>
+                    <br>
+                    Au-delà des ressources, vous pourrez également échanger au sujet des divers projets et protocoles crypto présents sur les <br> différentes blockchains dans des channels dédiés.<br>
+                    <br>
+                    Parmi les membres, certains sont intervenants. Ils couvrent chacun une spécialité parmi les principaux domaines étudiés sur <br> le Discord.<br>
+                    <br>
+                    Au-delà de l’univers crypto, des channels sont prévus pour d’autres domaines d’investissement pour les membres voulant <br> partager leurs connaissances ou voulant se diversifier. L’objectif de fond est que chaque membre puisse se développer sur les <br> différents domaines étudiés et partagés.<br>
+                    <br>
+                    Tous ces domaines et ressources constituent ainsi un grand nombre de channels et sections sur un seul discord, cependant, <br> ils n’intéressent pas la totalité des membres, c’est pour cela que nous avons pallié ce problème.
+                </p>
+                <div class="pos">
+                    <img class="img" src="{{ asset('build/images/Vector 3.c3cfca88.png') }}">
+                </div>
+{% endblock %}

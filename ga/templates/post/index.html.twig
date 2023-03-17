@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Articles{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <h1 class="mt-3 mb-4">Parcourez notre <span class="bibi">bibliothèque</span></h1>
+        <p>Choisissez votre niveau, votre format de lecture et naviguez parmis nos articles triés par tags.</p>
+        <p>Votre niveau</p>
+        {% for level in levels %}
+            <a class="lvl" href="{{ path('app_level', { 'level': level.id }) }}">{{ level.name }}</a>
+        {% endfor %}
+        <div class="row">
+            <h2 class="mb-5">Nos derniers articles</h2>
+            {% for post in posts %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <a href="{{ path('post_detail', { 'id': post.id } ) }}">
+                            {% if post.image != null %}
+                                <img class="img" src="{{ asset('uploads/image/' ~ post.image) }}" alt="Vroum vrouuum">
+                            {% else %}
+                                <img class="img" src="{{ asset('build/images/images.d6d13be2.png') }}" alt="Vroum vrouuum">
+                            {% endif %}
+                            <div class="card-body">
+                                    <h5 class="card-title">{{ post.title }}</h5>
+                                <span class="badge badge-pill badge-success">{{ post.category }}</span>
+                                <span class="badge badge-pill badge-success">{{ post.level }}</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
