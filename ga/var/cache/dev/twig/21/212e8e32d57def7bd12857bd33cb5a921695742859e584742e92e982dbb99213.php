@@ -87,67 +87,69 @@ class __TwigTemplate_b69fd79a8da0eb922663f9f663c7d235c989113c26f93d512394858d5a3
         // line 6
         echo "    <div class=\"container\">
         <h1 class=\"mt-3 mb-4\">Parcourez notre <span class=\"bibi\">bibliothèque</span></h1>
-        <p>Choisissez votre niveau, votre format de lecture et naviguez parmis nos articles triés par tags.</p>
-        <p>Votre niveau</p>
-        ";
-        // line 10
+        <p>Choisissez votre niveau et naviguez parmis nos articles triés par tags.</p>
+        <div class=\"mt-5 mb-5\">
+            <h4>Votre niveau</h4>
+            ";
+        // line 11
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["levels"]) || array_key_exists("levels", $context) ? $context["levels"] : (function () { throw new RuntimeError('Variable "levels" does not exist.', 10, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["levels"]) || array_key_exists("levels", $context) ? $context["levels"] : (function () { throw new RuntimeError('Variable "levels" does not exist.', 11, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["level"]) {
-            // line 11
-            echo "            <a class=\"lvl\" href=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_level", ["level" => twig_get_attribute($this->env, $this->source, $context["level"], "id", [], "any", false, false, false, 11)]), "html", null, true);
+            // line 12
+            echo "                <a class=\"lvl\" href=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_level", ["level" => twig_get_attribute($this->env, $this->source, $context["level"], "id", [], "any", false, false, false, 12)]), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["level"], "name", [], "any", false, false, false, 11), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["level"], "name", [], "any", false, false, false, 12), "html", null, true);
             echo "</a>
-        ";
+            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['level'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 13
-        echo "        <div class=\"row\">
-            <h2 class=\"mb-5\">Nos derniers articles</h2>
+        // line 14
+        echo "        </div>
+        <div class=\"row\">
+            <h2 class=\"mt-5 mb-5\">Nos derniers articles</h2>
             ";
-        // line 15
+        // line 17
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["posts"]) || array_key_exists("posts", $context) ? $context["posts"] : (function () { throw new RuntimeError('Variable "posts" does not exist.', 15, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["posts"]) || array_key_exists("posts", $context) ? $context["posts"] : (function () { throw new RuntimeError('Variable "posts" does not exist.', 17, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["post"]) {
-            // line 16
+            // line 18
             echo "                <div class=\"col-md-4\">
                     <div class=\"card mb-4\">
                         <a href=\"";
-            // line 18
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post_detail", ["id" => twig_get_attribute($this->env, $this->source, $context["post"], "id", [], "any", false, false, false, 18)]), "html", null, true);
+            // line 20
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post_detail", ["id" => twig_get_attribute($this->env, $this->source, $context["post"], "id", [], "any", false, false, false, 20)]), "html", null, true);
             echo "\">
                             ";
-            // line 19
-            if ((twig_get_attribute($this->env, $this->source, $context["post"], "image", [], "any", false, false, false, 19) != null)) {
-                // line 20
-                echo "                                <img class=\"img\" src=\"";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/image/" . twig_get_attribute($this->env, $this->source, $context["post"], "image", [], "any", false, false, false, 20))), "html", null, true);
+            // line 21
+            if ((twig_get_attribute($this->env, $this->source, $context["post"], "image", [], "any", false, false, false, 21) != null)) {
+                // line 22
+                echo "                                <img class=\"img rounded\" src=\"";
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/image/" . twig_get_attribute($this->env, $this->source, $context["post"], "image", [], "any", false, false, false, 22))), "html", null, true);
                 echo "\" alt=\"Vroum vrouuum\">
                             ";
             } else {
-                // line 22
+                // line 24
                 echo "                                <img class=\"img\" src=\"";
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("build/images/images.d6d13be2.png"), "html", null, true);
                 echo "\" alt=\"Vroum vrouuum\">
                             ";
             }
-            // line 24
+            // line 26
             echo "                            <div class=\"card-body\">
                                     <h5 class=\"card-title\">";
-            // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "title", [], "any", false, false, false, 25), "html", null, true);
+            // line 27
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "title", [], "any", false, false, false, 27), "html", null, true);
             echo "</h5>
                                 <span class=\"badge badge-pill badge-success\">";
-            // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "category", [], "any", false, false, false, 26), "html", null, true);
+            // line 28
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "category", [], "any", false, false, false, 28), "html", null, true);
             echo "</span>
                                 <span class=\"badge badge-pill badge-success\">";
-            // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "level", [], "any", false, false, false, 27), "html", null, true);
+            // line 29
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "level", [], "any", false, false, false, 29), "html", null, true);
             echo "</span>
                             </div>
                         </a>
@@ -158,7 +160,7 @@ class __TwigTemplate_b69fd79a8da0eb922663f9f663c7d235c989113c26f93d512394858d5a3
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['post'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 33
+        // line 35
         echo "        </div>
     </div>
 ";
@@ -182,7 +184,7 @@ class __TwigTemplate_b69fd79a8da0eb922663f9f663c7d235c989113c26f93d512394858d5a3
 
     public function getDebugInfo()
     {
-        return array (  162 => 33,  150 => 27,  146 => 26,  142 => 25,  139 => 24,  133 => 22,  127 => 20,  125 => 19,  121 => 18,  117 => 16,  113 => 15,  109 => 13,  98 => 11,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  164 => 35,  152 => 29,  148 => 28,  144 => 27,  141 => 26,  135 => 24,  129 => 22,  127 => 21,  123 => 20,  119 => 18,  115 => 17,  110 => 14,  99 => 12,  95 => 11,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -194,19 +196,21 @@ class __TwigTemplate_b69fd79a8da0eb922663f9f663c7d235c989113c26f93d512394858d5a3
 {% block main %}
     <div class=\"container\">
         <h1 class=\"mt-3 mb-4\">Parcourez notre <span class=\"bibi\">bibliothèque</span></h1>
-        <p>Choisissez votre niveau, votre format de lecture et naviguez parmis nos articles triés par tags.</p>
-        <p>Votre niveau</p>
-        {% for level in levels %}
-            <a class=\"lvl\" href=\"{{ path('app_level', { 'level': level.id }) }}\">{{ level.name }}</a>
-        {% endfor %}
+        <p>Choisissez votre niveau et naviguez parmis nos articles triés par tags.</p>
+        <div class=\"mt-5 mb-5\">
+            <h4>Votre niveau</h4>
+            {% for level in levels %}
+                <a class=\"lvl\" href=\"{{ path('app_level', { 'level': level.id }) }}\">{{ level.name }}</a>
+            {% endfor %}
+        </div>
         <div class=\"row\">
-            <h2 class=\"mb-5\">Nos derniers articles</h2>
+            <h2 class=\"mt-5 mb-5\">Nos derniers articles</h2>
             {% for post in posts %}
                 <div class=\"col-md-4\">
                     <div class=\"card mb-4\">
                         <a href=\"{{ path('post_detail', { 'id': post.id } ) }}\">
                             {% if post.image != null %}
-                                <img class=\"img\" src=\"{{ asset('uploads/image/' ~ post.image) }}\" alt=\"Vroum vrouuum\">
+                                <img class=\"img rounded\" src=\"{{ asset('uploads/image/' ~ post.image) }}\" alt=\"Vroum vrouuum\">
                             {% else %}
                                 <img class=\"img\" src=\"{{ asset('build/images/images.d6d13be2.png') }}\" alt=\"Vroum vrouuum\">
                             {% endif %}

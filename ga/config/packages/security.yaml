@@ -18,8 +18,8 @@ security:
             provider: app_user_provider
             custom_authenticator: App\Security\LoginAuthenticator
             logout:
-                path: app_accueil
-                 where to redirect after logout
+                path: app_login
+                # where to redirect after logout
                 # target: app_any_route
 
             # activate different ways to authenticate
